@@ -1,9 +1,14 @@
 {
-  "extends": ["eslint:recommended", "plugin:import/errors", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "prettier",
+    "plugin:jest/recommended"
+  ],
   "rules": {
     "no-console": 1
   },
-  "plugins": ["import"],
+  "plugins": ["import", "jest"],
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module"
@@ -11,6 +16,7 @@
   "env": {
     "es6": true,
     "browser": true,
-    "node": true
+    "node": true,
+    "jest/globals": true
   }
 }

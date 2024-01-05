@@ -7,7 +7,7 @@ import {
   getNextHungerTime,
   getNextPoopTime,
 } from './constants';
-import { modFox, modScene, togglePoopBag, writeModal } from './ui';
+import { modFox, modScene, togglePoopBag, writeModal } from './helpers/ui';
 
 const gameState = {
   current: 'INIT',
