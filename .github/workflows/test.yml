@@ -23,3 +23,11 @@ jobs:
 
       - name: Run tests
         run: npm test
+
+      - name: Notify on failure via Telegram
+        if: failure()
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_GROUP_ID }}
+          token: ${{ TELEGRAM_BOT_ID }}
+          message: 'Tests failed on GitHub Actions.'
