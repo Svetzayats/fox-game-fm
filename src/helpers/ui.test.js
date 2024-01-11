@@ -44,8 +44,7 @@ describe('togglePoopBag function', () => {
     togglePoopBag(false);
     expect(
       document.querySelector('.poop-bag').classList.contains('hidden'),
-      // FIXME: break test for check github action
-    ).toBe(false);
+    ).toBe(true);
   });
 });
 
